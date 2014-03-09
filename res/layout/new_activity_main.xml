@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#8470ff"
+         >
+
+        <Button
+            android:id="@+id/button_total_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Total Expenditure"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_sumvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="43dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="17dp"
+            android:text="TextView"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/delete"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_month"
+            android:layout_alignBottom="@+id/textView_month"
+            android:layout_toLeftOf="@+id/save"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/add_row"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/delete"
+            android:text="+" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" >
+             <TableLayout 
+        android:id="@+id/table"
+       android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:padding="5dp" 
+     
+        >
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:id="@+id/disply_row">
+
+        <TextView
+            android:id="@+id/items"
+            android:layout_width="150dp"
+            
+            
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="Items" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="Amount" />
+
+    </TableRow>
+    </TableLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>
